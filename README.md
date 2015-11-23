@@ -23,7 +23,7 @@ The files selected from the data source and included here are:
 
     y_test.txt
 
-One file fromm the original data source was modified:
+One file from the original data source was modified:
 
     features2.txt,	modification of features.txt
 
