@@ -112,7 +112,9 @@ Reshaping of data occurred next. The “reshape2” library was loaded, and a melt c
 subjectid  activity  measure 1 avg  measure 2 avg  etc
 
 1          walk      0.2            0.3            0.4
+
 1          walkup    0.5            0.6            0.7
+
 1          walkdown  0.4            0.5            0.6
 
 The final data set was written to disk.
