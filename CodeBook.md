@@ -109,11 +109,11 @@ After each data set was handled, the resulting data sets for training and test w
 
 Reshaping of data occurred next. The “reshape2” library was loaded, and a melt command executed such that “subjectid” and “activity” were selected as the id factors. The dcast command was executed so that the mean of each measurement variable could be displayed for each unique combination of subjectid and activity. For example, for subjectid 1, the following could be a representative view of the displayed rows:
 
-subjectid&nbsp&nbsp&nbspactivity&nbsp&nsbs&nbspmeasure&nbsp1&nbspavg&nbsp&nbsp&nbspmeasure&nbsp2&nbspavg&nbsp&nbsp&nbspetc
+subjectid&nbsp;&nbsp;&nbsp;activity&nbsp;&nsbs&nbsp;measure&nbsp;1&nbsp;avg&nbsp;&nbsp;&nbsp;measure&nbsp;2&nbsp;avg&nbsp;&nbsp;&nbsp;etc
 
-1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwalk&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.2&nbsp&nbsp&nbsp&nbsp&nbsp&nbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.3&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.4
-1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwalkup&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.5&nbsp&nbsp&nbsp&nbsp&nbsp&nbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.6&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.7
-1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwalkdown&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.4&nbsp&nbsp&nbsp&nbsp&nbsp&nbs&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.5&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0.6
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;walk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.4
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;walkup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.7
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;walkdown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6
 
 The final data set was written to disk.
 
