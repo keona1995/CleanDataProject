@@ -285,3 +285,5 @@ subjectid:       factor variable ranging consecutively from 1 to 30. These repre
 
 activity:        factor variable indicating the activity that was measured. These activities were walking, walking upstairs, walking downstairs, sitting, standing, laying. In the final data set these are indicated in abbreviated form as walk, walkup, walkdown, sit, stand, lie.
 
+The dimensions of the tidy data set are 180 observations of 68 variables.
+
