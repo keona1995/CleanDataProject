@@ -41,9 +41,9 @@ Lichman, M. (2013). UCI Machine Learning Repository [http://archive.ics.uci.edu/
 ###Notes on the original (raw) data
 
 In most cases the raw data was obtained and used in its original form. The exceptions are the following three files:  
-  *y_test.txt  
-  *subject_test.txt  
-  *features.txt
+  * y_test.txt  
+  * subject_test.txt  
+  * features.txt
 
 During preliminary analysis, I tried to get a feel for the data by manually opening files and visually inspecting them. The two files “y_test.txt” and “subject_test.txt” above were opened in a basic text editor but were unsuccessfully formatted by the application. They were then opened in Microsoft Word, which successfully formatted the data, which was then copied back to plain text files in a separate location from the downloaded data. The original files were used in the formal analysis; however, without the intermediate step detailed here, I would not have grasped the intent of the authors. Hence, I am obligated to report these ancillary procedures.
 
@@ -58,22 +58,22 @@ Labels for the "activity" variable were derived from the file activity_labels.tx
 
 The list of features that were to serve as the column names for the final tidy data set were derived from several sources. Column names for measurement variables were derived from features_info.txt. The subjectid column name was assigned to data from  files subject_train.txt and subject_test.txt. The activity column name was assigned to  data from files y_train.txt and y_test.txt. The features were further transformed as follows:
 
-  *convert all names to lower case  
-  *replace all "-", ",", "(",")" with empty string ""  
+  * convert all names to lower case  
+  * replace all "-", ",", "(",")" with empty string ""  
 
 The names "subjectid" and "activity" were added to the vector of feature names. The feature vector was reserved for further use later in the analysis process.
 
 The training data set consisted of 3 different files:  
 
-  *X_train.txt		Contains primary measurement variables  
-  *subject_train.txt	Contains the subject id associated with each row of X_train.txt  
-  *y_train.txt		Contains the activity label associated with each row of X_train.txt
+  * X_train.txt		Contains primary measurement variables  
+  * subject_train.txt	Contains the subject id associated with each row of X_train.txt  
+  * y_train.txt		Contains the activity label associated with each row of X_train.txt
 
 The test data set consisted of 3 different files, organized similarly to the training data set:  
 
-  *X_test.txt  
-  *subject_test.txt  
-  *y_test.txt
+  * X_test.txt  
+  * subject_test.txt  
+  * y_test.txt
 
 Each of training and test data sets were handled separately and memory disposed of as quickly as possible to avoid potential problems with memory shortage. The dplyr package was loaded prior to handling of the data sets. The pattern of processing was the same for both data sets:
 
@@ -109,26 +109,27 @@ The final data set is named “myfinalcast” in the run_Analysis.R file and is outp
 
 The full list of the original features is listed in “features_info.txt” from the original study. The names of the variables in the data set resemble the original, with the following differences:
 
-  *all names have been changed to lower case  
-  *parentheses, dot, and comma characters have been removed  
-  *the only measurements retained are mean and standard deviation, indicated in the name by “mean” and “std”
+  * all names have been changed to lower case  
+  * parentheses, dot, and comma characters have been removed  
+  * the only measurements retained are mean and standard deviation, indicated in the name by “mean” and “std”
 
 The naming conventions adopted in this project are the following:
 
-  *Prefixes – ‘f’ denotes measurements from the frequency domain, ‘t’ denotes measurements from the time domain  
-  *Root names – First root can be “body”, or “gravity”, indicating body signals or gravity signals. Second root name 
+  * Prefixes – ‘f’ denotes measurements from the frequency domain, ‘t’ denotes measurements from the time domain  
+  * Root names – First root can be “body”, or “gravity”, indicating body signals or gravity signals. Second root name 
 can be attached to first root name and can be “acc” or “gyro” indicating signals from the accelerometer or the 
 gyroscope. Third root name can be attached to the second root name “acc” or “gyro”and can be “jerk” indicating a 
 jerk signal. Fourth root name can be attached to second or third rootname and can be “mag” indicating a magnitude measurement.  
-  *Suffixes – Principal suffix can be either “mean” or “std” indicating a mean value measurement or a standard deviation. 
+  * Suffixes – Principal suffix can be either “mean” or “std” indicating a mean value measurement or a standard deviation. 
 Subsidiary suffixes can be “x”, “y”, or “z” and can be attached to “mean” or “std” suffix; they indicate measurements 
 along x, y, or z axis.  
-  *Not all combinations make sense, and one combination is included in the original data set 
+  * Not all combinations make sense, and one combination is included in the original data set 
 (e.g., fbodybodygyromagstd) that was never explained. However, something like “fbodyaccjerkmeanz” makes perfect sense 
 and can be easily searched, summarized, etc., with the aid of this list of conventions.  
 
 
-The entire list of measurement variables are shown below. All are class numeric. No units were presented in the original study.
+The entire list of measurement variables are shown below. All are class numeric. No units were presented in the original study.  
+
   tbodyaccmeanx  
   tbodyaccmeany  
   tbodyaccmeanz  
@@ -198,11 +199,11 @@ The entire list of measurement variables are shown below. All are class numeric.
 
 The two categorical variables are subjectid and activity.
 
-subjectid:       
-factor variable ranging consecutively from 1 to 30. These represent a random selection of volunteers from the original study with no further disclosure of characteristics.
+  * subjectid      
+    factor variable ranging consecutively from 1 to 30. These represent a random selection of volunteers from the original study with no further disclosure of characteristics.
 
-activity:        
-factor variable indicating the activity that was measured. These activities were walking, walking upstairs, walking downstairs, sitting, standing, laying. In the final data set these are indicated in abbreviated form as walk, walkup, walkdown, sit, stand, lie.
+  * activity        
+    factor variable indicating the activity that was measured. These activities were walking, walking upstairs, walking downstairs, sitting, standing, laying. In the final data set these are indicated in abbreviated form as walk, walkup, walkdown, sit, stand, lie.
 
 The dimensions of the tidy data set are 180 observations of 68 variables.
 
