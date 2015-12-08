@@ -86,10 +86,10 @@ Each of training and test data sets were handled separately and memory disposed 
 7. combine the three data frames using column bind and save to a new data frame 4  
 8. convert the column representing the subject data into factor class  
 9. assign to the column names of the combined data set the reserved vector of features  
-10. select from data frame 4 only columns necessary variables for analysis and assign to another data frame 5  
+10. select from data frame 4 only columns necessary for analysis and assign to another data frame 5  
 11. dispose of data frames 1, 2, 3, 4.  
 
-After each data set was handled, the resulting data sets for training and test were combined using Row bind. At this stage the resulting data set represented merging training and test data sets. There were still some unnecessary columns remaining. These were removed using the dplyr “select” command, and the resulting data set was assigned to the final merged data set. As before, unnecessary data sets were disposed of.
+After each data set was handled, the resulting data sets for training and test were combined using row bind. At this stage the resulting data set represented the merging of training and test data sets. There were still some unnecessary columns remaining. These were removed using the dplyr “select” command, and the resulting data set was assigned to the final merged data set. As before, unnecessary data sets were disposed of.
 
 Reshaping of data occurred next. The “reshape2” library was loaded, and a melt command executed such that “subjectid” and “activity” were selected as the id factors. The dcast command was executed so that the mean of each measurement variable could be displayed for each unique combination of subjectid and activity. For example, for subjectid 1, the following could be a representative view of the displayed rows:
 
@@ -118,7 +118,7 @@ The naming conventions adopted in this project are the following:
   * Prefixes – ‘f’ denotes measurements from the frequency domain, ‘t’ denotes measurements from the time domain  
   * Root names – First root can be “body”, or “gravity”, indicating body signals or gravity signals. Second root name 
 can be attached to first root name and can be “acc” or “gyro” indicating signals from the accelerometer or the 
-gyroscope. Third root name can be attached to the second root name “acc” or “gyro”and can be “jerk” indicating a 
+gyroscope. Third root name can be attached to the second root name “acc” or “gyro” and can be “jerk” indicating a 
 jerk signal. Fourth root name can be attached to second or third rootname and can be “mag” indicating a magnitude measurement.  
   * Suffixes – Principal suffix can be either “mean” or “std” indicating a mean value measurement or a standard deviation. 
 Subsidiary suffixes can be “x”, “y”, or “z” and can be attached to “mean” or “std” suffix; they indicate measurements 
@@ -203,7 +203,7 @@ The two categorical variables are subjectid and activity.
     factor variable ranging consecutively from 1 to 30. These represent a random selection of volunteers from the original study with no further disclosure of characteristics.
 
   * activity        
-    factor variable indicating the activity that was measured. These activities were walking, walking upstairs, walking downstairs, sitting, standing, laying. In the final data set these are indicated in abbreviated form as walk, walkup, walkdown, sit, stand, lie.
+    factor variable indicating the activity that was measured. These activities were walking, walking upstairs, walking downstairs, sitting, standing, laying [sic]. In the final data set these are indicated in abbreviated form as walk, walkup, walkdown, sit, stand, lie.
 
 The dimensions of the tidy data set are 180 observations of 68 variables.
 
